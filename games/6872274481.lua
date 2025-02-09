@@ -8479,3 +8479,18 @@ local pksshaders = vape.Categories.World:CreateModule({
     end,
     Tooltip = 'Has cool shaders.'
 })		
+local chatcrasher = vape.Categories.Utility:CreateModule({
+    Name = 'ChatCrasher',
+    Function = function(callback)
+        while callback do
+		    wait(1.7)
+local args = {
+    [1] = " ",
+    [2] = "All"
+}
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+end
+end
+    end,
+    Tooltip = 'Crashes chat. EFFECTS ARE NOT IMMEADIATE BUT IT WILL WORK.'
+})
