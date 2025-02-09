@@ -8449,3 +8449,22 @@ run(function()
 	})
 end)
 	
+local CustomMouse = vape.Categories.Render:CreateModule({
+    Name = 'CustomMouseCursor',
+    Function = function(callback)
+        if callback then
+	local mouselplr = game.Players.LocalPlayer:GetMouse()
+	mouselplr.Icon = "rbxassetid://" .. tonumber(getgenv().custom_mouse_id) or "rbxasset://textures/Cursors/KeyboardMouse/ArrowCursor.png"
+    end,
+    Tooltip = 'Changes your mouse cursor.'
+})
+
+local textbox
+textbox = CustomMouse:CreateTextBox({
+    Name = 'ID',
+    Function = function(value)
+	getgenv().custom_mouse_id = value
+    end,
+    Placeholder = 'mouse id (num only)',
+    Tooltip = 'Enter the id of the custom mouse cursor.'
+})
