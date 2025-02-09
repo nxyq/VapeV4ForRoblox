@@ -8467,3 +8467,15 @@ local changecustomid = CustomMouse:CreateTextBox({
     Placeholder = 'mouse id (num only)',
     Tooltip = 'Enter the id of the custom mouse cursor.'
 })
+
+local pksshaders = vape.Categories.World:CreateModule({
+    Name = "pk's Blue Shaders",
+    Function = function(callback)
+        if callback then
+	game:GetService("Lighting").TimeOfDay = "00:00:00"
+	game.Lighting.Ambient = Color3.fromRGB(0,0,255)
+        game.Lighting.OutdoorAmbient = Color3.fromRGB(0, 0, 0)
+						end
+    end,
+    Tooltip = 'Has cool shaders.'
+})		
