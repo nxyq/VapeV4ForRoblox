@@ -8459,8 +8459,7 @@ local CustomMouse = vape.Categories.Render:CreateModule({
     Tooltip = 'Changes your mouse cursor.'
 })
 
-local textbox
-textbox = CustomMouse:CreateTextBox({
+local changecustomid = CustomMouse:CreateTextBox({
     Name = 'ID',
     Function = function(value)
 	getgenv().custom_mouse_id = value
